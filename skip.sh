@@ -1,1 +1,1 @@
-ls -l | awk '(NR>1)'
+ls | sed '1~2d'
