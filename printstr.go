@@ -1,7 +1,9 @@
 package piscine
 
-import import "github.com/01-edu/z01"
+import "github.com/01-edu/z01"
 
 func PrintStr(s string) {
-	z01.PrintRune(%s, string)
+	for _, r := range s {
+		z01.PrintRune(r)
+		
 }
