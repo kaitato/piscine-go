@@ -2,7 +2,7 @@ package piscine
 
 import "fmt"
 
-func PointOne(n *int) {
-	n* := 1
-	z01.Print(&n)
+func PointOne(n * int) {
+	n* = 1
+	fmt.Print(&n)
 }
