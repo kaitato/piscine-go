@@ -8,16 +8,17 @@ func PrintComb2() {
 			for c := a; c <= '9'; c++ {
 				for d := b + 1; d <= '9'; d++ {
 					if d > b && a <= c {
-						z01.PrintRune('a')
-						z01.PrintRune('b')
+						z01.PrintRune(a)
+						z01.PrintRune(b)
 						z01.PrintRune(' ')
-						z01.PrintRune('c')
-						z01.PrintRune('d')
-						} if a == '9' & b == '8' {
+						z01.PrintRune(c)
+						z01.PrintRune(d)
+						if a == '9' && b == '8' {
 							z01.PrintRune('\n')
-					} else {
-						z01.PrintRune(',')
-						z01.PrintRune(' ')
+						} else {
+							z01.PrintRune(',')
+							z01.PrintRune(' ')
+						}
 					}
 				}
 			}
