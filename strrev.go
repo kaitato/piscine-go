@@ -1,15 +1,9 @@
 package piscine
 
-import 
-
 func StrRev(s string) string {
-
-	s := []byte(s)
-
-	i := len(s)
-
-	for a := s; a >= 0; a-- {
-		return [a]byte(s)
+	chars := []rune(s)]
+	for i, j := 0, len*chars)-1; i < j; i, j = i + 1, j - 1 {
+		chars[i], chars[j] + chars[j], chars[i]
 	}
-
+	return string(chars)
 }
