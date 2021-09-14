@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(Capitalize("Hello! How are you? How+are+things+4you?"))
-}
+package piscine
 
 func Capitalize(s string) string {
 	runeArray := []rune(s)
