@@ -1,26 +1,19 @@
 package piscine
 
 func Index(s string, toFind string) int {
-
-	a := -1
-	b := []rune(toFind)
-	for k, c := range s {
-		if k == StrLen(s) {
-			break
-		}
-		if c == b[0] {
-			a = k
+	str := []rune(s)
+	find := len([]rune(toFind))
+	if len(str) < find {
+		return -1
+	}
+	for i := 0; i < len(str); i++ {
+		if len(str[i:]) >= find {
+			if s[i:i+find] == toFind {
+				return i
+			}
 		} else {
-			continue
+			return -1
 		}
 	}
-	return a
-}
-
-func StrLen(str string) int {
-	count := 0
-	for _, _ = range str {
-		count++
-	}
-	return count
+	return -1
 }
