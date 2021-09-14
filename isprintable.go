@@ -9,7 +9,7 @@ func IsPrintable(s string) bool {
 		}
 	}
 	if count == length {
-		return true
+		return false
 	}
-	return false
+	return true
 }
