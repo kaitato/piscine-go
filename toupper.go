@@ -1,9 +1,9 @@
 package piscine
 
 func ToUpper(s string) string {
-	Arune := []rune(s)
-	for i := range Arune {
-		if Arune[i] >= 'a' && aRune <= 'z' {
+	aRune := []rune(s)
+	for i := range aRune {
+		if aRune[i] >= 'a' && aRune[i] <= 'z' {
 			aRune[i] = aRune[i] - 32
 		}
 	}
