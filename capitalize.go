@@ -10,7 +10,7 @@ func Capitalize(s string) string {
 
 	for i, char := range aRune {
 		if char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z' || char >= '0' && char <= '9' {
-			if i == 0 || aRune[i-1] >= 'a' && aRune[i-1] <= 'z' || aRune[i-1] >= 'A' && aRune[i-1] <= 'Z' || aRune[i-1] >= '0' && aRune[i-1] <= '9' {
+			if i == 0 || aRune[i-1] >= 32 && aRune[i-1] <= 47 || aRune[i-1] >= 58 && aRune[i-1] <= 64 || aRune[i-1] >= 91 && aRune[i-1] <= 96 || aRune[i-1] >= 122 {
 				if aRune[i] >= 'a' && aRune[i] <= 'z' {
 					aRune[i] = char - 32
 				}
