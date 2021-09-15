@@ -5,7 +5,7 @@ import "github.com/01-edu/z01"
 func PrintNbrInOrder(n int) {
 	var a []rune
 	if n == 0 {
-		a = append(a, rune(n%10)+48)
+		a = append(a, 48)
 	}
 
 	for i := 0; n > 0; i++ {
