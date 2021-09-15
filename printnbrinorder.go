@@ -23,8 +23,8 @@ func PrintNbrInOrder(n int) {
 				}
 			}
 		}
-		for _, r := range a {
-			z01.PrintRune(r)
-		}
+	}
+	for _, r := range a {
+		z01.PrintRune(r)
 	}
 }
