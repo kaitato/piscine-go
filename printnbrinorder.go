@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintNbrInORder(n int) {
+func PrintNbrInOrder(n int) {
 	var a []rune
 	if n == 0 {
 		a = append(a, 48)
