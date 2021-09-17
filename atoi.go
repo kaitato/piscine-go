@@ -16,7 +16,7 @@ func Atoi(s string) int {
 		ascii := int(char)
 		if ascii == 45 && index == 0 {
 			PosOrNeg = 0
-		} else if ascii > 43 && index == 0 {
+		} else if ascii == 43 && index == 0 {
 			PosOrNeg = 1
 		} else if ascii > 47 && ascii < 58 {
 			returnedValue = returnedValue*10 + (ascii - 48)
