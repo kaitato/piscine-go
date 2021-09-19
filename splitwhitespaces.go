@@ -1,37 +1,40 @@
-package piscine
+package main
 
-func SplitWhiteSpaces(s string) []string {
-	var aString []string
-	count := 1
-	strlen := 0
-	result := ""
-	for c := range s {
-		if isWhiteSpace(s[c]) {
-			count++
-		}
-		strlen++
-	}
-	aString = make([]string, count)
-	i := 0
-	for j, c := range s {
-		if j+1 == strlen {
-			aString[i] = result + string(s[j])
-		}
-		if isWhiteSpace(s[j]) {
-			if i <= count {
-				aString[i] = result
-				i++
-			}
-		} else {
-			result += string(c)
-		}
-	}
-	return aString
+import "fmt"
+
+func main() {
+	fmt.Printf("%#v\n", SplitWhiteSpaces("Hello how are you?"))
 }
 
-func isWhiteSpace(r byte) bool {
-	if r == ' ' || r == '\n' || r == '\t' {
-		return true
+func SplitWhiteSpaces(s string) []string {
+	ln := 0
+	spaces := false
+	for c := range s {
+		if spaces && c != 0 && (s[c-1] == '\n' ||
+			s[c-1] == '\t' || s[c-1] == ' ') &&
+			s[c] != '\n' && s[c] != '\t' && s[c] != ' ' {
+			ln++
+		}
+		if s[c] != '\n' && s[c] != '\t' && s[c] != ' ' {
+			spaces = true
+		}
 	}
-	return false
+	ln++
+
+	count := 0
+	result := make([]string, ln)
+	ok := true
+	for _, c := range s {
+		if c == '\n' || c == '\t' || c == ' ' {
+			if !ok {
+				count++
+			}
+			ok = true
+			continue
+		}
+		result[count] = result[count] + string(c)
+		ok = false
+	}
+	return result
+
 }
