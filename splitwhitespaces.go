@@ -21,7 +21,6 @@ func SplitWhiteSpaces(s string) []string {
 			if i <= count {
 				aString[i] = result
 				i++
-				result = ""
 			}
 		} else {
 			result += string(c)
