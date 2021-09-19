@@ -30,5 +30,4 @@ func SplitWhiteSpaces(s string) []string {
 		ok = false
 	}
 	return result
-
 }
