@@ -7,20 +7,20 @@ import (
 )
 
 func main() {
-	arguments := os.Args[1:]
+	args := os.Args[1:]
 
 	length := 0
-	for i := range arguments {
-		length = i + 1
+	for i := range args {
+		length = i
 	}
 
-	if length > 1 {
+	if length >= 1 {
 		fmt.Println("Too many arguments")
 	} else if length == 0 {
 		fmt.Println("File name missing")
-	} else if arguments[0] == "quest8.txt" {
+	} else if args[0] == "quest8.txt" {
 
-		contents, e := ioutil.ReadFile(arguments[0])
+		contents, e := ioutil.ReadFile(args[0])
 		if e != nil {
 			fmt.Println(e.Error())
 			return
