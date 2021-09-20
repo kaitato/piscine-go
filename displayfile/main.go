@@ -20,12 +20,12 @@ func main() {
 		fmt.Println("File name missing")
 	} else if arguments[0] == "quest8.txt" {
 
-		content, err := ioutil.ReadFile(arguments[0])
-		if err != nil {
-			fmt.Println(err.Error())
+		contents, e := ioutil.ReadFile(arguments[0])
+		if e != nil {
+			fmt.Println(e.Error())
 			return
 		}
-		fmt.Println(string(content))
+		fmt.Println(string(contents))
 
 	}
 }
