@@ -25,6 +25,6 @@ func main() {
 			fmt.Println(err.Error())
 			return
 		}
-		fmt.Printf(string(contents))
+		fmt.Print(string(contents))
 	}
 }
