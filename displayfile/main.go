@@ -26,6 +26,5 @@ func main() {
 			return
 		}
 		fmt.Println(string(contents))
-
 	}
 }
