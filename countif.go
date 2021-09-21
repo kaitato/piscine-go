@@ -7,5 +7,5 @@ func CountIf(f func(string) bool, tab []string) int {
 			count += 1
 		}
 	}
-	return 0
+	return count
 }
