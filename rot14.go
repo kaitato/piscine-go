@@ -12,8 +12,8 @@ func rotate(b rune) rune {
 
 func Rot14(s string) string {
 	result := ""
-	for _, res := range s {
-		result += string(rotate(res))
+	for _, char := range s {
+		result += string(rotate(char))
 	}
 	return result
 }
