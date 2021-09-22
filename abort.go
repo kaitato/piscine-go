@@ -1,9 +1,11 @@
 package piscine
 
-import "sort"
-
 func Abort(a, b, c, d, e int) int {
 	arg := []int{a, b, c, d, e}
-	sort.Ints(arg)
+	for i := 1; i < len(arg); i++ {
+		if arg[i] < arg[i-1] {
+			arg[i], arg[i-1] = arg[i-1], arg[i]
+		}
+	}
 	return arg[2]
 }
