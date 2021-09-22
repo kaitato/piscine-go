@@ -3,9 +3,9 @@ package piscine
 func CollatzCountdown(start int) int {
 	count := 0
 	if start < 1 {
-		count--
+		return -1
 	}
-	if start > 1 {
+	if start != 1 {
 		if start%2 == 0 {
 			start /= 2
 		} else {
