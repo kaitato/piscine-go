@@ -27,21 +27,10 @@ func main() {
 	}
 
 	// countdown
-	for a := '9'; a >= '0'; a-- { // loop for first digit
-		for b := '9'; b >= '0'; b-- { // loop for second digit
-			for c := '9'; c >= '0'; c-- { // loop for third digit
-				z01.PrintRune(a) // print each number
-				z01.PrintRune(b)
-				z01.PrintRune(c)
-				if a == '0' && b == '0' && c == '0' { // if digits hit the last number
-					z01.PrintRune('\n') // print new line
-				} else { // otherwise print ', '
-					z01.PrintRune(',')
-					z01.PrintRune(' ')
-				}
-			}
-		}
+	for i := '9'; i >= '0'; i-- {
+		z01.PrintRune(i)
 	}
+	z01.PrintRune('\n')
 }
 
 // firstrune
