@@ -121,21 +121,22 @@ func main() {
 
 // is power of 2
 func ispowerof2(nb int) bool {
-	if nb < 2 {
+	if nb < 1 {
 		return false
+	}
+	if nb == 1 {
+		return true
 	}
 	if nb >= 2 {
 		result := 1
-		for i := 1; result <= nb; i++ {
+		for i := 0; result <= nb; i++ {
 			result = result * 2
 			if result == nb {
 				return true
 			}
 		}
-		return false
-	} else {
-		return false
 	}
+	return false
 }
 
 // search replace
