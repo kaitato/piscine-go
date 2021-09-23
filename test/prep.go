@@ -168,6 +168,7 @@ func main() {
 		}
 	}
 	fmt.Printf(string(result)) // fmt
+	z01.PrintRune('\n')
 }
 
 
@@ -306,6 +307,27 @@ func Capitalize(s string) string {
 // hidden p
 
 // range
+func main() {
+	argu := os.Args
+	r1, _ := strconv.Atoi(argu[1])
+	r2, _ := strconv.Atoi(argu[2])
+	if len(argu) != 3 {
+		fmt.Print()
+	} else {
+		if r1 < r2 {
+			for i := r1; i <= r2; i++ {
+				fmt.Printf("%v ", i)
+			}
+		} else if r1 > r2 {
+			for j := r1; j >= r2; j-- {
+				fmt.Printf("%v ", j)
+			}
+		}
+	}
+}
+
+
+
 
 // f prime
 
