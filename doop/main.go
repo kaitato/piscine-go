@@ -6,43 +6,51 @@ import (
 	"strconv"
 )
 
-func validateOperator(test string) bool {
-	op := []string{"+", "-", "*", "/", "%"}
-	for _, res := range op {
-		if res == test {
-			return true
-		}
+func ChechOperator(s string) bool {
+	if s == "+" || s == "-" || s == "*" || s == "/" || s == "%" {
+		return true
 	}
 	return false
 }
 
 func main() {
-	args := os.Args[1:]
-	if len(args) > 3 || len(args) < 3 {
-		fmt.Print()
-	} else {
-		if validateOperator(args[1]) == false {
-			fmt.Println(0)
-		} else {
-			first, _ := strconv.Atoi(args[0])
-			second, _ := strconv.Atoi(args[2])
-
-			if args[1] == "%" && second == 0 {
-				fmt.Print("No Modulo by 0\n")
-			} else if args[1] == "/" && second == 0 {
-				fmt.Print("No division by 0\n")
-			} else if args[1] == "+" {
-				fmt.Println(first + second)
-			} else if args[1] == "-" {
-				fmt.Println(first - second)
-			} else if args[1] == "*" {
-				fmt.Println(first * second)
-			} else if args[1] == "/" {
-				fmt.Println(first / second)
-			} else {
-				fmt.Println(first % second)
+	result := 0
+	num1 := os.Args[1]
+	operator := os.Args[2]
+	num2 := os.Args[3]
+	nb1, err1 := strconv.Atoi(num1)
+	if err1 != nil {
+		fmt.Println("0")
+		return
+	}
+	nb2, err2 := strconv.Atoi(num2)
+	if err2 != nil {
+		fmt.Println("0")
+		return
+	}
+	if ChechOperator(operator) == true {
+		if operator == "+" {
+			result = nb1 + nb2
+		} else if operator == "-" {
+			result = nb1 - nb2
+		} else if operator == "*" {
+			result = nb1 * nb2
+		} else if operator == "/" {
+			if nb2 == 0 {
+				fmt.Println("No division by 0")
+				return
 			}
-
+			result = nb1 / nb2
+		} else if operator == "%" {
+			if nb2 == 0 {
+				fmt.Println("No Modulo by 0")
+				return
+			}
+			result = nb1 % nb2
 		}
+		fmt.Println(result)
+	} else {
+		fmt.Println("0")
+		return
 	}
 }
