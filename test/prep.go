@@ -274,11 +274,7 @@ func Capitalize(s string) string {
 				if aRune[i] >= 'a' && aRune[i] <= 'z' {
 					aRune[i] = char - 32
 				}
-			} else {
-				if aRune[i] >= 'A' && aRune[i] <= 'Z' {
-					aRune[i] = char + 32
-				}
-			}
+			} 
 		}
 	}
 	return string(aRune)
